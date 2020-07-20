@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Register Account</title>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+<title>Insert title here</title>
+</head>
+<body>
+ <div class="container">
+            <div class="regbox box">
+                <img class="avatar" src="https://www.icba.org/images/default-source/logos/icons/education-icons/director_blue_people.png?sfvrsn=bb2e9008_4">
+                <h1>
+Register Account</h1>
+  <form name="myform" method="post"  onsubmit="return validateform()" >
+ <p>Username</p>
+<input type="text" placeholder="Username" name="name" required>
+                   <p>Useremail</p>
+<input type="text" placeholder="Useremail" name="email" required>
+                   <p>Password</p>
+<input type="password" placeholder="Password" name="password" required>
+
+   <input type="submit" value="Submit" />
+   <a href="login.jsp">Already have Account?</a>
+  </form>
+  </div>
+ </div>
+ <script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
+</body>
+</html>
